@@ -1,0 +1,49 @@
+<div class="page-header">
+  <h3>Private Parking #<%= @private_parking.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Offer user</dt>
+      <dd><%= @private_parking.offer_user_id %></dd>
+
+      <dt>Accept user</dt>
+      <dd><%= @private_parking.accept_user_id %></dd>
+
+      <dt>Date</dt>
+      <dd><%= @private_parking.date %></dd>
+
+      <dt>Time</dt>
+      <dd><%= @private_parking.time %></dd>
+
+      <dt>Price</dt>
+      <dd><%= @private_parking.price %></dd>
+
+      <dt>Address</dt>
+      <dd><%= @private_parking.address %></dd>
+
+      <dt>City</dt>
+      <dd><%= @private_parking.city %></dd>
+
+      <dt>Zipcode</dt>
+      <dd><%= @private_parking.zipcode %></dd>
+
+      <dt>Description</dt>
+      <dd><%= @private_parking.description %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/private_parkings" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/private_parkings/<%= @private_parking.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_private_parking/<%= @private_parking.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

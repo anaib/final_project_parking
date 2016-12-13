@@ -1,0 +1,44 @@
+<div class="page-header">
+  <h1>
+    Private parkings
+    <a href="/private_parkings/new" class="btn btn-lg btn-success">New Private parking</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Offer user</th>
+        <th>Accept user</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Price</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Zipcode</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @private_parkings.each do |private_parking| %>
+      <tr>
+        <td><%= private_parking.offer_user_id %></td>
+        <td><%= private_parking.accept_user_id %></td>
+        <td><%= private_parking.date %></td>
+        <td><%= private_parking.time %></td>
+        <td><%= private_parking.price %></td>
+        <td><%= private_parking.address %></td>
+        <td><%= private_parking.city %></td>
+        <td><%= private_parking.zipcode %></td>
+        <td><%= private_parking.description %></td>
+        <td>
+          <a href="/private_parkings/<%= private_parking.id %>" class="btn btn-primary">Show</a>
+          <a href="/private_parkings/<%= private_parking.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_private_parking/<%= private_parking.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
