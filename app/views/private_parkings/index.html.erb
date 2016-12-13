@@ -24,7 +24,7 @@
       <% @private_parkings.each do |private_parking| %>
       <tr>
         <td><%= private_parking.offer_user.phone %></td>
-        <td><%= private_parking.accept_user_id %></td>
+        <td><%= private_parking.accept_user.phone %></td>
         <td><%= private_parking.date %></td>
         <td><%= private_parking.time %></td>
         <td><%= private_parking.price %></td>
