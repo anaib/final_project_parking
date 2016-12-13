@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :private_parkings_offer,
+             :class_name => "PrivateParking",
+             :foreign_key => "offer_user_id",
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
