@@ -26,6 +26,8 @@ class UsersController < ApplicationController
     @user.address = params[:address]
     @user.city = params[:city]
     @user.zipcode = params[:zipcode]
+    @user.first_name = params[:first_name]
+    @user.last_name = params[:last_name]
 
     save_status = @user.save
 
@@ -56,6 +58,8 @@ class UsersController < ApplicationController
     @user.address = params[:address]
     @user.city = params[:city]
     @user.zipcode = params[:zipcode]
+    @user.first_name = params[:first_name]
+    @user.last_name = params[:last_name]
 
     save_status = @user.save
 
