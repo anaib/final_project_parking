@@ -54,6 +54,24 @@
         <input type="text" id="zipcode" name="zipcode" placeholder="Zipcode" class="form-control" value="<%= @user.zipcode %>">
       </div>
 
+      <!-- Label and input for first_name -->
+      <div class="form-group">
+        <label for="first_name" class="control-label">
+          First name
+        </label>
+
+        <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="<%= @user.first_name %>">
+      </div>
+
+      <!-- Label and input for last_name -->
+      <div class="form-group">
+        <label for="last_name" class="control-label">
+          Last name
+        </label>
+
+        <input type="text" id="last_name" name="last_name" placeholder="Last name" class="form-control" value="<%= @user.last_name %>">
+      </div>
+
       <button class="btn btn-warning">
         Update User
       </button>
