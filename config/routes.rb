@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "users#index"
   # Routes for the Private_parking resource:
   # CREATE
   get "/private_parkings/new", :controller => "private_parkings", :action => "new"
