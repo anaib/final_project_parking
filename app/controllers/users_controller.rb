@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @private_parking = PrivateParking.new
     @user = User.find(params[:id])
 
     render("users/show.html.erb")
