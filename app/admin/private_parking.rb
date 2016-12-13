@@ -1,5 +1,7 @@
 ActiveAdmin.register PrivateParking do
 
+ permit_params :offer_user_id, :accept_user_id, :date, :time, :price, :address, :city, :zipcode, :description
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
