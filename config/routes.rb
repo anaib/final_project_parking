@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root :to => "users#index"
+  root :to => "private_parkings#index"
   # Routes for the Private_parking resource:
   # CREATE
   get "/private_parkings/new", :controller => "private_parkings", :action => "new"
@@ -18,22 +19,12 @@ Rails.application.routes.draw do
   get "/delete_private_parking/:id", :controller => "private_parkings", :action => "destroy"
   #------------------------------
 
+  devise_for :users
   # Routes for the User resource:
-  # CREATE
-  get "/users/new", :controller => "users", :action => "new"
-  post "/create_user", :controller => "users", :action => "create"
-
   # READ
   get "/users", :controller => "users", :action => "index"
   get "/users/:id", :controller => "users", :action => "show"
 
-  # UPDATE
-  get "/users/:id/edit", :controller => "users", :action => "edit"
-  post "/update_user/:id", :controller => "users", :action => "update"
-
-  # DELETE
-  get "/delete_user/:id", :controller => "users", :action => "destroy"
-  #------------------------------
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
